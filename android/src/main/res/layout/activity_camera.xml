@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".CameraActivity">
+  <com.otaliastudios.cameraview.CameraView
+    android:id="@+id/camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    app:cameraAudio="off"
+    app:cameraFacing="back"
+    app:cameraGestureTap="autoFocus"
+    app:cameraMode="picture"
+    app:cameraPictureFormat="jpeg"
+    app:cameraPlaySounds="true"
+    app:cameraRequestPermissions="true"
+    app:cameraUseDeviceOrientation="true" />
+
+  <View
+    android:id="@+id/shutterAnimationView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_black_outline"
+    android:visibility="gone" />
+
+  <Button
+    android:id="@+id/takePictureView"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:layout_alignStart="@+id/buttonsHolder"
+    android:layout_alignLeft="@+id/buttonsHolder"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center_horizontal|bottom"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/btn_shutter"
+    android:textColor="@color/light_grey"
+    android:textSize="20sp"
+    android:visibility="visible" />
+
+
+  <View
+    android:id="@+id/buttonsHolder"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:layout_alignParentRight="true"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@color/translucent_black" />
+
+
+</FrameLayout>
