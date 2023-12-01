@@ -341,14 +341,25 @@ public class ImagePickerModule extends ReactContextBaseJavaModule
     if (pickVideo)
     {
       requestCode = REQUEST_LAUNCH_VIDEO_LIBRARY;
-      libraryIntent = new Intent(Intent.ACTION_PICK);
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                libraryIntent = new Intent(Intent.ACTION_PICK);
+            } else {
+                libraryIntent = new Intent(MediaStore.ACTION_PICK_IMAGES);
+            }
       libraryIntent.setType("video/*");
     }
     else
     {
       requestCode = REQUEST_LAUNCH_IMAGE_LIBRARY;
-      libraryIntent = new Intent(Intent.ACTION_PICK,
-      MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                libraryIntent = new Intent(Intent.ACTION_PICK,
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                        libraryIntent.setType("image/*");
+            } else {
+                libraryIntent = new Intent(MediaStore.ACTION_PICK_IMAGES,
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                libraryIntent.setType("image/*");
+            }
 
       if (pickBoth)
       {
@@ -565,8 +576,11 @@ public class ImagePickerModule extends ReactContextBaseJavaModule
                                    @NonNull final Callback callback,
                                    @NonNull final int requestCode)
   {
-    final int writePermission = ActivityCompat
-            .checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+     int writePermission = 0;
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+            writePermission = ActivityCompat
+                    .checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+      }
     final int cameraPermission = ActivityCompat
             .checkSelfPermission(activity, Manifest.permission.CAMERA);
 
