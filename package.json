@@ -44,7 +44,7 @@
     "ci:publish": "yarn semantic-release",
     "semantic-release": "semantic-release",
     "prepare": "bob build",
-    "postinstall": "sh ./patch_script.sh"
+    "postinstall": "sh patch_script.sh"
   },
   "keywords": [
     "react-native",
