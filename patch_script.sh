@@ -1,0 +1,1 @@
+patch --forward node_modules/@types/react-native/globals.d.ts < patches/@types+react-native+0.57.65.patch

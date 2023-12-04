@@ -43,7 +43,8 @@
     "test:jest": "jest \"/src/\"",
     "ci:publish": "yarn semantic-release",
     "semantic-release": "semantic-release",
-    "prepare": "bob build"
+    "prepare": "bob build",
+    "postinstall": "sh ./patch_script.sh"
   },
   "keywords": [
     "react-native",
@@ -63,7 +64,8 @@
     "@semantic-release/git": "7.0.12",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.22",
-    "@types/react-native": "^0.57.63",
+    "@types/react-native": "^0.57.65",
+    "@types/node": "18.11.9",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "babel-jest": "^24.8.0",
@@ -81,7 +83,7 @@
     "rimraf": "^2.6.3",
     "semantic-release": "15.13.16",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.2"
+    "typescript": "4.8.4"
   },
   "repository": {
     "type": "git",
