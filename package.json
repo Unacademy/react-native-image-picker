@@ -57,7 +57,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
-    "@react-native-community/bob": "^0.6.0",
+    "@react-native-community/bob": "^0.6.1",
     "@react-native-community/eslint-config": "^0.0.5",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/git": "7.0.12",
@@ -88,7 +88,13 @@
   },
   "overrides": {
     "minimatch": "3.0.8",
-    "@types/minimatch": "3.0.5"
+    "@types/minimatch": "3.0.5",
+    "inquirer": "7.3.3",
+    "browserslist": "4.21.5",
+    "caniuse-lite": "1.0.30001449",
+    "electron-to-chromium": "1.4.284",
+    "node-releases": "2.0.10",
+    "update-browserslist-db": "1.0.13"
   },
   "repository": {
     "type": "git",
