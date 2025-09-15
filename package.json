@@ -54,6 +54,10 @@
     "picker"
   ],
   "dependencies": {},
+  "resolutions": {
+    "baseline-browser-mapping": "2.8.1",
+    "browserslist": "4.25.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
@@ -84,6 +88,7 @@
     "rimraf": "^2.6.3",
     "semantic-release": "15.13.16",
     "ts-jest": "^24.0.2",
+    "browserslist": "4.25.4",
     "typescript": "4.8.4"
   },
   "overrides": {
