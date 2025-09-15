@@ -87,6 +87,7 @@
     "browserslist": "4.24.5",
     "browserslist-config-baseline": "0.3.0",
     "baseline-browser-mapping": "0.3.1",
+    "node-releases": "2.0.14",
     "typescript": "4.8.4"
   },
   "overrides": {
