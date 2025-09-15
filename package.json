@@ -92,7 +92,10 @@
   },
   "overrides": {
     "minimatch": "3.0.8",
-    "@types/minimatch": "3.0.5"
+    "@types/minimatch": "3.0.5",
+    "browserslist": "4.21.5",
+    "node-releases": "2.0.5",
+    "baseline-browser-mapping": "2.8.2"
   },
   "repository": {
     "type": "git",
