@@ -54,10 +54,6 @@
     "picker"
   ],
   "dependencies": {},
-  "resolutions": {
-    "baseline-browser-mapping": "2.8.1",
-    "browserslist": "4.25.4"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
