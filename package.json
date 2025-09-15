@@ -84,7 +84,7 @@
     "rimraf": "^2.6.3",
     "semantic-release": "15.13.16",
     "ts-jest": "^24.0.2",
-    "browserslist": "4.25.4",
+    "browserslist": "4.24.5",
     "typescript": "4.8.4"
   },
   "overrides": {
