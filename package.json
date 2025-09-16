@@ -72,7 +72,7 @@
     "eslint": "5.16.0",
     "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-prettier": "3.0.1",
-    "husky": "^2.4.1",
+    "husky": "4.3.8",
     "jest": "^24.8.0",
     "lint-staged": "^8.2.1",
     "metro-react-native-babel-preset": "^0.54.1",
@@ -84,11 +84,18 @@
     "rimraf": "^2.6.3",
     "semantic-release": "15.13.16",
     "ts-jest": "^24.0.2",
+    "browserslist-config-baseline": "0.3.0",
+    "baseline-browser-mapping": "0.3.1",
+    "browserslist": "4.21.4",
+    "node-releases": "2.0.5",
     "typescript": "4.8.4"
   },
   "overrides": {
     "minimatch": "3.0.8",
-    "@types/minimatch": "3.0.5"
+    "@types/minimatch": "3.0.5",
+    "browserslist": "4.21.4",
+    "node-releases": "2.0.5",
+    "baseline-browser-mapping": "2.8.2"
   },
   "repository": {
     "type": "git",
