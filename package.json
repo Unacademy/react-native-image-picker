@@ -43,7 +43,7 @@
     "test:jest": "jest \"/src/\"",
     "ci:publish": "yarn semantic-release",
     "semantic-release": "semantic-release",
-    "prepare": "bob build"
+    "prepare": "echo 'Skipping build - using source directly'"
   },
   "keywords": [
     "react-native",
@@ -65,7 +65,6 @@
     "@types/minimatch": "^3.0.5",
     "@types/node": "18.11.9",
     "@types/react": "^16.8.22",
-    "@types/react-native": "https://github.com/Unacademy/types-react-native-copy.git#develop",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "babel-jest": "^24.8.0",
