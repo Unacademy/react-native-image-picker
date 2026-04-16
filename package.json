@@ -39,14 +39,17 @@
     "url": "https://github.com/react-native-image-picker/react-native-image-picker.git"
   },
   "devDependencies": {
-    "@react-native-community/bob": "0.17.1",
+    "@babel/core": "^7.25.2",
     "@semantic-release/git": "10.0.1",
-    "@types/react": "18.2.13",
-    "@types/react-native": "0.72.2",
-    "semantic-release": "21.0.5",
-    "typescript": "5.2.2"
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "react": "19.2.3",
+    "react-native": "0.85.1",
+    "react-native-builder-bob": "^0.41.0",
+    "semantic-release": "^25.0.3",
+    "typescript": "^5.8.3"
   },
-  "@react-native-community/bob": {
+  "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
     "targets": [
