@@ -1,4 +1,164 @@
-# React Native Image Picker
+# react-native-image-picker
+
+> :sunrise_over_mountains: A React Native module that allows you to use native UI to select media from the device library or directly from the camera.
+
+---
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Tech Stack](#tech-stack)
+3. [Repository Structure](#repository-structure)
+4. [Key Components](#key-components)
+5. [Setup & Installation](#setup--installation)
+6. [Running the Application](#running-the-application)
+7. [Infrastructure & CI/CD](#infrastructure--cicd)
+8. [Contributing](#contributing)
+
+---
+
+## Overview
+
+**react-native-image-picker** is part of the [Unacademy](https://github.com/unacademy) engineering ecosystem.
+
+:sunrise_over_mountains: A React Native module that allows you to use native UI to select media from the device library or directly from the camera.
+
+**Topics / Tags:** `approvers-1`
+
+---
+
+## Tech Stack
+
+| Attribute | Value |
+|-----------|-------|
+| **Primary Language** | Java |
+| **Framework / Platform** | Java |
+| **Package Manager** | Gradle |
+
+### Dependencies
+
+**Dev Dependencies:**
+- `flow-bin`
+- `husky`
+- `lint-staged`
+- `prettier`
+
+
+---
+
+## Repository Structure
+
+```
+react-native-image-picker/
+├── .circleci
+├── .flowconfig
+├── .github/
+│   ├── ISSUE_TEMPLATE.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── stale.yml
+├── .gitignore
+├── .npmignore
+├── .prettierrc
+├── .watchmanconfig
+├── LICENSE.md
+├── README.md
+├── android/
+│   ├── build.gradle
+│   ├── gradle
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+├── docs/
+│   ├── Install.md
+│   ├── Reference.md
+├── example/
+│   ├── .babelrc
+│   ├── .buckconfig
+│   ├── .flowconfig
+│   ├── .gitattributes
+│   ├── .gitignore
+├── images/
+│   ├── android-image.png
+│   ├── ios-image.png
+├── index.d.ts
+├── index.js
+├── index.js.flow
+├── ios/
+│   ├── ImagePickerManager.h
+│   ├── ImagePickerManager.m
+│   ├── RNImagePicker.xcodeproj
+... (truncated)
+```
+
+---
+
+## Key Components
+
+Below is an analysis of the key files and modules:
+
+| File / Directory | Purpose |
+|-----------------|---------|
+| `LICENSE.md` | Source file |
+| `README.md` | Source file |
+| `android/build.gradle` | Source file |
+| `android/gradle.properties` | Source file |
+| `android/gradle/wrapper/gradle-wrapper.jar` | Source file |
+| `android/gradle/wrapper/gradle-wrapper.properties` | Source file |
+| `android/gradlew` | Source file |
+| `android/gradlew.bat` | Source file |
+| `android/src/main/AndroidManifest.xml` | Source file |
+| `android/src/main/java/com/imagepicker/FileProvider.java` | Source file |
+| `android/src/main/java/com/imagepicker/ImagePickerModule.java` | Source file |
+
+> **Note:** Only the first 20 non-trivial files are listed. See the repository tree above for the complete structure.
+
+---
+
+## Setup & Installation
+
+### Prerequisites
+
+- Git (`git --version`)
+- Java runtime installed
+
+
+
+### Steps
+
+```bash
+git clone git@github.com:unacademy/react-native-image-picker.git
+cd react-native-image-picker
+# Open in Android Studio or IntelliJ IDEA
+# Sync Gradle dependencies
+```
+
+
+---
+
+## Running the Application
+
+_Refer to the project's build system or CI configuration._
+
+---
+
+## Infrastructure & CI/CD
+
+- Test suite present — run tests before submitting PRs
+
+---
+
+## Contributing
+
+1. Create a feature branch: `git checkout -b feat/your-feature`
+2. Commit your changes: `git commit -m "feat: describe your change"`
+3. Push and open a PR targeting `master`
+4. Ensure all CI checks pass before requesting review
+
+---
+
+## Original README (Excerpt)
+
+> # React Native Image Picker
 
 [![npm version](https://badge.fury.io/js/react-native-image-picker.svg)](https://badge.fury.io/js/react-native-image-picker)
 [![npm](https://img.shields.io/npm/dt/react-native-image-picker.svg)](https://npmcharts.com/compare/react-native-image-picker?minimal=true)
@@ -6,95 +166,9 @@
 ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg)
 [![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/react-native-image-picker/Lobby)
 
-A React Native module that allows you to use native UI to select a photo/video from the device library or directly from the camera, like so:
+A React Native module that allows you to use na
 
-| iOS                                                                                                                   | Android                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| <img title="iOS" src="https://github.com/react-community/react-native-image-picker/blob/master/images/ios-image.png"> | <img title="Android" src="https://github.com/react-community/react-native-image-picker/blob/master/images/android-image.png"> |
+---
 
-#### _Before you open an issue_
-
-This library started as a basic bridge of the native iOS image picker, and I want to keep it that way. As such, functionality beyond what the native `UIImagePickerController` supports will not be supported here. **Multiple image selection, more control over the crop tool, and landscape support** are things missing from the native iOS functionality - **not issues with my library**. If you need these things, [react-native-image-crop-picker](https://github.com/ivpusic/react-native-image-crop-picker) might be a better choice for you.
-
-## Getting Started
-
-```
-yarn add react-native-image-picker
-react-native link react-native-image-picker
-```
-
-You will also need to add `UsageDescription` on iOS and some permissions on Android, refer to the [Install doc](docs/Install.md).
-
-## Usage
-
-```javascript
-import ImagePicker from 'react-native-image-picker';
-
-// More info on all the options is below in the API Reference... just some common use cases shown here
-const options = {
-  title: 'Select Avatar',
-  customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],
-  storageOptions: {
-    skipBackup: true,
-    path: 'images',
-  },
-};
-
-/**
- * The first arg is the options object for customization (it can also be null or omitted for default options),
- * The second arg is the callback which sends object: response (more info in the API Reference)
- */
-ImagePicker.showImagePicker(options, (response) => {
-  console.log('Response = ', response);
-
-  if (response.didCancel) {
-    console.log('User cancelled image picker');
-  } else if (response.error) {
-    console.log('ImagePicker Error: ', response.error);
-  } else if (response.customButton) {
-    console.log('User tapped custom button: ', response.customButton);
-  } else {
-    const source = { uri: response.uri };
-
-    // You can also display the image using data:
-    // const source = { uri: 'data:image/jpeg;base64,' + response.data };
-
-    this.setState({
-      avatarSource: source,
-    });
-  }
-});
-```
-
-Then later, if you want to display this image in your render() method:
-
-```javascript
-<Image source={this.state.avatarSource} style={styles.uploadAvatar} />
-```
-
-### Directly Launching the Camera or Image Library
-
-To Launch the Camera or Image Library directly (skipping the alert dialog) you can
-do the following:
-
-```javascript
-// Launch Camera:
-ImagePicker.launchCamera(options, (response) => {
-  // Same code as in above section!
-});
-
-// Open Image Library:
-ImagePicker.launchImageLibrary(options, (response) => {
-  // Same code as in above section!
-});
-```
-
-#### Notes
-
-On iOS, don't assume that the absolute uri returned will persist. See [#107](/../../issues/107)
-
-For more, read the [API Reference](docs/Reference.md).
-
-## License
-
-[MIT](LICENSE.md)
+*This README was auto-generated on 2026-09-14 by the Unacademy repo-summarizer tool.*
+*For corrections or additions, edit this file directly or open an issue.*
